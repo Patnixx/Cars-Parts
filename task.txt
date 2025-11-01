@@ -1,0 +1,16 @@
+Webová aplikácia na správu inventára auto-dielov (Laravel)
+
+Pozostávať bude z dvoch modelov:
+
+Car (name, registration_number, is_registered)
+
+Part (name, serialnumber, car_id)
+
+Jedno auto má viacero dielov a jeden diel patrí len k jednému autu.
+K autu je evidované, že je registrované alebo nie.
+Používateľ vie zobraziť zoznam aut/dielov, pridať nové auto/diel, upravovať auto/diel, mazať auto/diel
+Polia name, serialnumber sú povinné polia. Pole registration_number je povinné iba ak je auto registrované.
+Použite migrácie. Vypracované zadanie nahrajte do repozitára alebo pošlite zdrojové súbory.
+Na dizajnovú stránku použite bootstrap. Na backend použite laravel, na frontend podľa možností vuejs.
+Na databázu použite mysql. Použiť môžete aj iné nevyhnutné technológie.
+Bonus: zapracujte filtrovanie do zoznamu aut/dielov
