@@ -88,6 +88,7 @@
     }
     reset();
     fetch();
+    confirm('Diel uložený.');
   };
 
   const edit = (part) => {
@@ -99,6 +100,7 @@
     if (confirm('Odstrániť diel?')) {
       await axios.delete(`/api/parts/${id}`);
       fetch();
+      confirm('Diel odstránený.');
     }
   };
 

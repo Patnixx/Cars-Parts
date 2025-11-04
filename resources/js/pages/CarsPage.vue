@@ -24,7 +24,7 @@
               <input v-model="form.name" placeholder="Názov *" required class="form-control" />
             </div>
             <div class="col-md-3 mb-2">
-              <input v-model="form.registration_number" :required="form.is_registered" placeholder="ŠPZ" class="form-control" />
+              <input v-model="form.registration_number" :required="form.is_registered" :placeholder="form.is_registered ? 'ŠPZ *' : 'ŠPZ'" class="form-control" />
             </div>
             <div class="col-md-2 mb-2 d-flex align-items-center">
               <div class="form-check">
@@ -93,6 +93,7 @@
     }
     reset();
     fetch();
+    confirm('Auto uložené.');
   };
 
   const edit = (car) => {
@@ -104,6 +105,7 @@
     if (confirm('Odstrániť auto?')) {
       await axios.delete(`/api/cars/${id}`);
       fetch();
+      confirm('Auto odstránené.');
     }
   };
 
