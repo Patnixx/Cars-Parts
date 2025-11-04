@@ -1,16 +1,12 @@
 <template>
-    <div class="container mt-5">
-        <h1 class="text-primary text-center">Hello from Vue + Laravel + Bootstrap!</h1>
-        <p class="text-center">Your frontend is working 🎉</p>
+    <div>
+      <Navbar></Navbar>
+      <div class="container">
+        <router-view />
+      </div>
     </div>
-</template>
-
-<script setup>
-    alert('Vue component loaded successfully!');
-</script>
-
-<style scoped>
-    body {
-        background-color: #f8f9fa;
-    }
-</style>
+  </template>
+  
+  <script setup>
+  import { RouterLink, RouterView } from 'vue-router';
+  </script>

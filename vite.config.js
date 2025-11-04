@@ -10,4 +10,9 @@ export default defineConfig({
         }),
         vue(),
     ],
+    server: {
+        proxy: {
+            '/api': 'http://localhost:8000',
+        }
+    }
 });
